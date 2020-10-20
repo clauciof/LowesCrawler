@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'lowescrawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'lowescrawler (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
