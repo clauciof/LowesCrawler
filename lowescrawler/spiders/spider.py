@@ -36,8 +36,8 @@ class LowesSpider(scrapy.Spider):
         self.avaliacoes = [int(r) for r in reviews]
         
         #capturando urls válidas dos produtos
-        urls = [href['href'] for href in hrefs[23:] if '/pd/' in href['href']]
-        urls = list(dict.fromkeys(urls))      #eliminando duplicados   
+        urls = ['https://www.lowes.com'+href['href'] for href in hrefs[23:] if '/pd/' in href['href']]
+        self.urls = list(dict.fromkeys(urls))      #eliminando duplicados   
        
         #separando marcas e descricao de cada <div> capturada
         self.marcas = [descricao_span[i] for i in range(0, len(descricao_span), 3)]
@@ -48,7 +48,7 @@ class LowesSpider(scrapy.Spider):
         self.models = [Ids[i+3] for i in range(0,len(Ids),4)]
 
         #salvando em um csv
-        self.create_csv(self.skus, self.models, self.marcas, self.titulos, self.estrelas, self.avaliacoes)     
+        self.create_csv(self.skus, self.models, self.marcas, self.titulos, self.estrelas, self.avaliacoes, self.urls)     
         
         #segue para a proxima pagina
         while (self.offset<=756):
@@ -57,8 +57,8 @@ class LowesSpider(scrapy.Spider):
             yield scrapy.Request( proxima_url, callback=self.parse)
 
 
-    def create_csv(self, skus, models, marcas, titulos, estrelas, avaliacoes):
-        data = { 'Id':skus, 'Titulo':titulos, 'Modelo':models, 'Marca':marcas, 'Estrelas':estrelas, 'Avaliacoes':avaliacoes}
+    def create_csv(self, skus, models, marcas, titulos, estrelas, avaliacoes, urls):
+        data = { 'Id':skus, 'Titulo':titulos, 'Modelo':models, 'Marca':marcas, 'Estrelas':estrelas, 'Avaliacoes':avaliacoes, 'Url':urls}
         df = pd.DataFrame(data=data)
 
         with open('lowes.csv', 'a') as f:
