@@ -2,8 +2,8 @@
 Spider desenvolvido para capturar dados de produtos do https://www.lowes.com/
 
 ## Descrição 
-Spider construido em Python com o framework Scrapy. Acessa o site https://www.lowes.com/ e captura as seguintes informaçoes:
-#### Id | Titulo | Modelo | Marca | Estrelas | Avaliacoes
+Spider construído em Python com o framework Scrapy. Acessa o site https://www.lowes.com/ e captura as seguintes informaçoes:
+#### Id | Titulo | Modelo | Marca | Estrelas | Avaliacoes | URL
 
 No final obtem-se um arquivo csv com os dados obtidos
 
@@ -32,10 +32,13 @@ scrapy crawl lowes
 
 
 # Amostras
-![alt Text](https://github.com/clauciof/imagens/blob/master/analise1.png)
+A amostra dos dados está em LowesCrawler/lowescrawler/spiders/lowes.csv
 
 
 ![alt Text](https://github.com/clauciof/imagens/blob/master/analise1.png)
+
+
+![alt Text](https://github.com/clauciof/imagens/blob/master/analise2.png)
 
 
 ## Autor
