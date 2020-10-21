@@ -19,6 +19,8 @@ pip install bs4
 ```
 
 ### Execução
+O código do spider se encontra em 'LowesCrawler/lowescrawler/spiders/spider.py'
+
 No diretório /spiders executar o comando:
 ```
 scrapy runspider spider.py
