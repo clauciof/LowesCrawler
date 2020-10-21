@@ -35,7 +35,7 @@ scrapy crawl lowes
 ![alt Text](https://github.com/clauciof/imagens/blob/master/analise1.png)
 
 
-![alt Text](https://github.com/clauciof/imagens/blob/master/analise1.png)
+![alt Text](https://github.com/clauciof/imagens/blob/master/analise2.png)
 
 
 ## Autor
