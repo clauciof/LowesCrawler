@@ -32,6 +32,9 @@ scrapy crawl lowes
 
 
 # Amostras
+A amostra dos dados está em LowesCrawler/lowescrawler/spiders/lowes.csv
+
+
 ![alt Text](https://github.com/clauciof/imagens/blob/master/analise1.png)
 
 
