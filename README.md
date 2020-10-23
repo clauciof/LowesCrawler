@@ -9,13 +9,14 @@ No final obtem-se um arquivo csv com os dados obtidos
 
 ### Pré Requisitos
 
-Python3 e bibliotecas BeautifulSoup4, Pandas e Scrapy.
+Python3 e bibliotecas BeautifulSoup4, Pandas, Selenium e Scrapy.
 
 #### Instalação
 ```
 pip install pandas
 pip install Scrapy
 pip install bs4
+pip install selenium
 ```
 
 ### Execução
